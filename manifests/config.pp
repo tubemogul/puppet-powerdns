@@ -74,12 +74,16 @@ class powerdns::config {
     value => "${config_path}/pdns.d",
   }
 
-  powerdns::setting { 'api':
-    value => $enable_api,
+  if $::powerdns::enable_api {
+    powerdns::setting { 'api':
+      value => $enable_api,
+    }
   }
 
-  powerdns::setting { 'api-key':
-    value => $api_key,
+  if $::powerdns::api_key {
+    powerdns::setting { 'api-key':
+      value => $::powerdns::api_key,
+    }
   }
 
   if $::powerdns::master {
