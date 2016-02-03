@@ -86,6 +86,12 @@ class powerdns::config {
     }
   }
 
+  if $::powerdns::webserver{
+    powerdns::setting { 'webserver':
+      value => $::powerdns::webserver,
+    }
+  }
+
   if $::powerdns::local_port {
     powerdns::setting { 'local-port':
       value => $::powerdns::local_port,
