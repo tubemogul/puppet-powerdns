@@ -18,6 +18,8 @@ class powerdns (
   $config_mode     = undef,
   $config_path     = undef,
   $config_purge    = undef,
+  $enable_api      = undef,
+  $api_key         = undef,
 ) {
   # Fail fast if we're not using a new Puppet version.
   if versioncmp($::puppetversion, '3.7.0') < 0 {
