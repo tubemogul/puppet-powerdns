@@ -76,7 +76,7 @@ class powerdns::config {
 
   if $::powerdns::enable_api {
     powerdns::setting { 'api':
-      value => $enable_api,
+      value => $::powerdns::enable_api,
     }
   }
 
