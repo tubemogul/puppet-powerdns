@@ -86,6 +86,12 @@ class powerdns::config {
     }
   }
 
+  if $::powerdns::local_port {
+    powerdns::setting { 'local-port':
+      value => $::powerdns::local_port,
+    }
+  }
+
   if $::powerdns::master {
     powerdns::setting { 'master':
       value => 'yes',
