@@ -20,6 +20,7 @@ class powerdns (
   $config_purge    = undef,
   $enable_api      = undef,
   $api_key         = undef,
+  $webserver       = undef,
   $local_port      = undef,
 ) {
   # Fail fast if we're not using a new Puppet version.
